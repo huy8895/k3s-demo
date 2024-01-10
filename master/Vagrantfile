@@ -4,7 +4,7 @@
 # Tạo máy ảo từ box centos/7, gán địa chỉ IP, đặt hostname, gán 2GB bộ nhớ, 2 cpus  
 Vagrant.configure("2") do |config|
     config.vm.box = "centos/7"
-    config.vm.network "private_network", ip: "192.168.56.300"
+    config.vm.network "private_network", ip: "192.168.56.30"
     config.vm.hostname = "k3s-master"
     config.vbguest.auto_update = false
 
