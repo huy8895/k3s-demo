@@ -13,7 +13,10 @@ Vagrant.configure("2") do |config|
        vb.cpus = 2
        vb.memory = "2048"
     end
-    
+
+     # Chạy file install-docker-kube.sh sau khi nạp Box
+     config.vm.provision "shell", path: "./../base-setup.sh"
+
     # Chạy các lệnh shell
     config.vm.provision "shell", inline: <<-SHELL
       # Đặt pass 123 có tài khoản root và cho phép SSH
